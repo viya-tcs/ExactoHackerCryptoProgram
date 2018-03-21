@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 /*import exactohackerprogram.ComboLockSim;*/
 
+// THIS IS A GIT PROJECT COMMENT FROM MY LAPTOP
+
 /**
  *
  * @author thecoderschool
