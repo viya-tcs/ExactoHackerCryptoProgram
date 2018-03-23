@@ -23,9 +23,20 @@ public class ExactoHackerProgram {
     int passwordText;
     private static String silence;
     double max = 9999;
+    String username = "Vishal Yathish";
+    
+     public boolean openLock(String combination) {
+        if (combination.equals(this.username)) {
+            return true;
+        }else {
+        //System.out.println(this.silence);
+        return false;
+        }
+    } 
 
-    public boolean openLock(String combination) {
-        if (combination.equals(this.silence)) {
+     
+    public boolean correctUsername(String username) {
+        if (username.equals(this.silence)) {
             return true;
         }else {
         //System.out.println(this.silence);
@@ -38,19 +49,36 @@ public class ExactoHackerProgram {
     }
     
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Print password below:");
+        Scanner sc01 = new Scanner(System.in);
+        System.out.println("Print username below:");
         
-        ExactoHackerProgram myLock = new ExactoHackerProgram();
+        String enteredUsername = sc01.next();
+        
+        ExactoHackerProgram myUsername = new ExactoHackerProgram();
+        
+        boolean checkUsername =  myUsername.correctUsername(enteredUsername);
+        
+        if (checkUsername) {
+            System.out.println("next -->");
+            
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Print password below:");
+        
+            ExactoHackerProgram myLock = new ExactoHackerProgram();
         
 
-        String comboFailure = sc.next();
-        boolean isOpen = myLock.openLock(comboFailure);
+            String comboFailure = sc.next();
+            boolean isOpen = myLock.openLock(comboFailure);
         
-        if (isOpen) {
+            if (isOpen) {
             System.out.println("click");
-        } else {
+            } else {
             System.out.println("You are a complete and utter loser");
+            }
+        } else {
+             System.out.println("You are a complete and utter loser");
+        
+        }
         }
     }
     
@@ -62,4 +90,4 @@ public class ExactoHackerProgram {
     
     */
     
-}
+
