@@ -23,10 +23,10 @@ public class ExactoHackerProgram {
     int passwordText;
     private static String silence;
     double max = 9999;
-    String username = "Vishal Yathish";
+    String username = "VishalYathish";
     
      public boolean openLock(String combination) {
-        if (combination.equals(this.username)) {
+        if (combination.equals(this.silence)) {
             return true;
         }else {
         //System.out.println(this.silence);
@@ -36,7 +36,7 @@ public class ExactoHackerProgram {
 
      
     public boolean correctUsername(String username) {
-        if (username.equals(this.silence)) {
+        if (username.equals(this.username)) {
             return true;
         }else {
         //System.out.println(this.silence);
